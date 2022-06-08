@@ -46,7 +46,7 @@ public class Pet {
     }
 
     public void greeting() {
-        System.out.println("Hello proud pet owner, this is " + name + ", his boredom level is at " + boredomLevel + ", his hunger level is at" + hungerLevel + ", his thirst level is at" + thirstLevel);
+        System.out.println("Hello proud pet owner, this is " + name + ", his boredom level is at " + boredomLevel + ", his hunger level is at " + hungerLevel + ", his thirst level is at " + thirstLevel);
     }
 
     public void feed() {
@@ -66,6 +66,9 @@ public class Pet {
         boredomLevel++;
         thirstLevel++;
 
+
+
+
         if (hungerLevel == 10) {
 
 
@@ -79,11 +82,13 @@ public class Pet {
             System.exit(0);
         }
         if (boredomLevel == 10) {
-            System.out.println(name + "'s has become so unbearably board, he dediced he needed to use your lifeless body as a toy, and succeeded");
+            System.out.println(name + "'s has become so unbearably bored, he decided he needed to use your lifeless body as a toy, and succeeded");
             System.exit(0);
 
         }
     }
+
+
 
 }
 

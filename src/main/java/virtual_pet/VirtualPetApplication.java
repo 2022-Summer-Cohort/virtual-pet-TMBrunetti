@@ -1,14 +1,13 @@
 package virtual_pet;
 
+
+
 import java.util.Scanner;
 
 public class VirtualPetApplication {
 
     public static void main(String[] args) {
         //Interact with a VirtualPet object in this method
-
-        //TODO
-        //System.out.println("Hey, I'm your pet "+name);
 
         Pet manticore= new Pet("Manticore", 5, 6, 5);
                 String userOption = "";
