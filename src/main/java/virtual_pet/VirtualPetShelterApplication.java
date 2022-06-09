@@ -12,7 +12,7 @@ public class VirtualPetShelterApplication {
         String userInput = "";
         Scanner input = new Scanner(System.in);
 
-        while ( !userInput.equalsIgnoreCase("quit")) {
+        while (shelter.areAllPetsAlive() && !userInput.equalsIgnoreCase("quit")) {
             shelter.showAllPetStatus();
             System.out.println("Type 'feed', 'water', 'play', 'adopt', 'admit', or 'interact' with single pet. Type 'quit' to end.");
             System.out.println("Be careful with these beasts, they can be deadly");
@@ -57,7 +57,10 @@ public class VirtualPetShelterApplication {
             }
             shelter.tickAll();
         }
-
+        input.close();
+        System.out.println("Thank you for playing");
+        if(!shelter.areAllPetsAlive())
+        System.out.println("Sorry your pet has become very upset with your care and decided to eat you :(");
         }
     }
 

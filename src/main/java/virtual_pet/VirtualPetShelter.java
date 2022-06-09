@@ -12,20 +12,23 @@ public class VirtualPetShelter {
     public VirtualPetShelter () {
         shelter = new ArrayList<>();
         shelter.add(new Pet("Jackalope", 3, 2, 5 ));
-        shelter.add(new Pet("El Chupacabra", 2, 7, 8));
+        shelter.add(new Pet("El Chupacabra", 2, 4, 5));
         shelter.add(new Pet("Manticore", 3, 3, 3));
 
     }
 
     public int shelterPopulation() {
+
         return shelter.size();
     }
 
     public void admitPet(String name) {
+
         shelter.add(new Pet(name, 2, 2, 2));
     }
 
     public void adoptPet(String name) {
+
         shelter.remove(findPetByName(name));
     }
 
@@ -66,6 +69,15 @@ public class VirtualPetShelter {
         for(Pet pet: shelter) {
             pet.tick();
         }
+    }
+
+    public boolean areAllPetsAlive(){
+        for(Pet pet: shelter) {
+            if(!pet.isAlive()){
+                return false;
+            }
+        }
+        return true;
     }
 
 
